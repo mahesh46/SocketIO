@@ -12,7 +12,7 @@ localhost:3000
 // type message in simulator and press button to send (1st field nickname, send for message)
 // you should see message in the open browsers
 // put in a signature then send signature
-// you should see signature in the open chart browsers
+// you should see signature in the open chat browsers
 
 
 A char, however, is only one byte. ... If you send a char over a socket, it will be one byte on both machines. If you send an int over a socket, since it's four bytes, it's possible that one machine will interpret the bytes in a different order than the other, according to the endianness.

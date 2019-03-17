@@ -15,6 +15,6 @@ localhost:3000
 
 // you should see message in the open browsers
 // put in a signature then send signature
-// you should see signature in the open chart browsers
+// you should see signature in the open chat browsers
 
 
