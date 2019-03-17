@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="socketIOClient_example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3JW-mt-Afg">
+                                <rect key="frame" x="0.0" y="128" width="375" height="182"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlG-tx-QeV" customClass="YPDrawSignatureView" customModule="socketIOClient_example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="152"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" red="0.87984528559999997" green="0.052443682329999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mmc-rQ-FkF">
+                                        <rect key="frame" x="0.0" y="152" width="375" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfP-YL-5Ah">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
+                                                <state key="normal" title="Clear"/>
+                                                <connections>
+                                                    <action selector="clearSignature:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i78-ph-7eY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oph-Wu-AyD">
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="30"/>
+                                                <state key="normal" title="Save signature"/>
+                                                <connections>
+                                                    <action selector="saveSignature:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Md-XQ-NLH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Oph-Wu-AyD" firstAttribute="width" secondItem="sfP-YL-5Ah" secondAttribute="width" id="m3i-4i-uq8"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LfV-L8-IK4">
+                                <rect key="frame" x="0.0" y="82" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nnV-LD-UYr">
+                                <rect key="frame" x="0.0" y="51" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gk-Yn-dmb">
+                                <rect key="frame" x="4" y="335" width="367" height="30"/>
+                                <state key="normal" title="Send Signature"/>
+                                <connections>
+                                    <action selector="sendSignaturePress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xma-Kk-7pC"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GnD-Jg-zr4">
+                                <rect key="frame" x="4" y="411" width="371" height="256"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="KFl-Bh-rig"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="jIE-a2-hIl">
+                                        <rect key="frame" x="0.0" y="28" width="371" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jIE-a2-hIl" id="hhd-GM-VFa">
+                                            <rect key="frame" x="0.0" y="0.0" width="371" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kui-Iq-snm"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Mbj-MQ-Ehm"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYN-Dq-7kk">
+                                <rect key="frame" x="4" y="373" width="367" height="30"/>
+                                <state key="normal" title="Send Message"/>
+                                <connections>
+                                    <action selector="sendMessageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KuI-hm-yHG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0gk-Yn-dmb" firstAttribute="top" secondItem="3JW-mt-Afg" secondAttribute="bottom" constant="25" id="57f-uv-9xT"/>
+                            <constraint firstItem="3JW-mt-Afg" firstAttribute="centerX" secondItem="0gk-Yn-dmb" secondAttribute="centerX" id="6q5-b1-9q1"/>
+                            <constraint firstItem="3JW-mt-Afg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="128" id="739-Bs-YO6"/>
+                            <constraint firstItem="GnD-Jg-zr4" firstAttribute="leading" secondItem="cYN-Dq-7kk" secondAttribute="leading" id="8nu-BY-0xm"/>
+                            <constraint firstItem="3JW-mt-Afg" firstAttribute="leading" secondItem="LfV-L8-IK4" secondAttribute="leading" id="E4B-mc-ubb"/>
+                            <constraint firstAttribute="bottom" secondItem="3JW-mt-Afg" secondAttribute="bottom" constant="357" id="I7z-mX-qUx"/>
+                            <constraint firstItem="3JW-mt-Afg" firstAttribute="trailing" secondItem="LfV-L8-IK4" secondAttribute="trailing" id="JpQ-Yb-kOf"/>
+                            <constraint firstItem="nnV-LD-UYr" firstAttribute="trailing" secondItem="LfV-L8-IK4" secondAttribute="trailing" id="KBN-Wg-8jo"/>
+                            <constraint firstItem="3JW-mt-Afg" firstAttribute="leading" secondItem="nnV-LD-UYr" secondAttribute="leading" id="R6E-CZ-SxM"/>
+                            <constraint firstItem="GnD-Jg-zr4" firstAttribute="leading" secondItem="0gk-Yn-dmb" secondAttribute="leading" id="UW9-3T-Own"/>
+                            <constraint firstItem="cYN-Dq-7kk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="4" id="Xdf-Je-dj1"/>
+                            <constraint firstItem="3JW-mt-Afg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fVg-Or-ZF3"/>
+                            <constraint firstItem="3JW-mt-Afg" firstAttribute="centerX" secondItem="cYN-Dq-7kk" secondAttribute="centerX" id="oih-XR-lo4"/>
+                            <constraint firstItem="3JW-mt-Afg" firstAttribute="top" secondItem="LfV-L8-IK4" secondAttribute="bottom" constant="16" id="qRx-RT-HP7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cYN-Dq-7kk" secondAttribute="trailing" constant="4" id="rIs-Qx-E0F"/>
+                            <constraint firstItem="GnD-Jg-zr4" firstAttribute="top" secondItem="cYN-Dq-7kk" secondAttribute="bottom" constant="8" symbolic="YES" id="sIW-PB-Zrw"/>
+                            <constraint firstItem="GnD-Jg-zr4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tj0-2b-eql"/>
+                            <constraint firstItem="nnV-LD-UYr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="vwM-Fd-MvZ"/>
+                            <constraint firstItem="3JW-mt-Afg" firstAttribute="trailing" secondItem="GnD-Jg-zr4" secondAttribute="trailing" id="zEs-K0-6eu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="chatTextField" destination="LfV-L8-IK4" id="8pe-Jl-kU7"/>
+                        <outlet property="nicknameField" destination="nnV-LD-UYr" id="wQV-Tk-8tc"/>
+                        <outlet property="signatureView" destination="qlG-tx-QeV" id="qcq-ZG-e4e"/>
+                        <outlet property="tableView" destination="GnD-Jg-zr4" id="SfM-0j-GcP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="91.304347826086968"/>
+        </scene>
+    </scenes>
+</document>

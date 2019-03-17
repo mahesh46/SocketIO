@@ -1,0 +1,6 @@
+framework module Pods_socketIOClient_exampleUITests {
+  umbrella header "Pods-socketIOClient_exampleUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
