@@ -1,7 +1,7 @@
 # SocketIO
 Node Server, Express Web page and IOS Swift Application using Sockets - Chat example 
 
-chat example, with node server, web interface, and ios app interface. All communucating through sockets.
+chat example, with node server, web interface, and ios app interface. All communicating through sockets.
 
 //start node server
 cd chatServer-simple
